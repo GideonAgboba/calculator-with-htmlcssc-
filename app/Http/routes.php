@@ -17,21 +17,21 @@ Route::get('/', function () {
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'Auth\HomeController@index');
 
 
 Route::group(['middleware' => ['web']], function(){
 Route::get('/signin', function(){
     return view('auth.login');
 });
-Route::resource('/', 'IndexController@index');
-Route::resource('/reg', 'IndexController@store');
+Route::resource('/', 'Auth\IndexController@index');
+Route::resource('/reg', 'Auth\IndexController@store');
 
 // ADMIN ROUTES
 Route::group(['middleware'=>['adminauth']], function(){
-    Route::resource('/adminprofilesadmin', 'EditAdminUsers');
-    Route::resource('/adminprofilesguest', 'EditGuestUsers');
-    Route::resource('/adminpage', 'Admin');
+    Route::resource('/adminprofilesadmin', 'Auth\EditAdminUsers');
+    Route::resource('/adminprofilesguest', 'Auth\EditGuestUsers');
+    Route::resource('/adminpage', 'Auth\Admin');
     Route::get('/adminpageaccept', function(){
        return view('admin.orders.accept'); 
     });
@@ -44,13 +44,13 @@ Route::group(['middleware'=>['adminauth']], function(){
 
 
 
-Route::post('/sendmsg', 'ProfileController@sentmsg');
-Route::resource('/cart', 'CartController');
-Route::resource('/basket', 'CartController');
-Route::resource('/profile', 'ProfileController');
-Route::post('/editprofile/{id}', 'ProfileController@editprofile');
-Route::post('/changeprofileimage/{id}', 'ProfileController@editdp');
-Route::resource('/checkout', 'CheckOutController');
+Route::post('/sendmsg', 'Auth\ProfileController@sentmsg');
+Route::resource('/cart', 'Auth\CartController');
+Route::resource('/basket', 'Auth\CartController');
+Route::resource('/profile', 'Auth\ProfileController');
+Route::post('/editprofile/{id}', 'Auth\ProfileController@editprofile');
+Route::post('/changeprofileimage/{id}', 'Auth\ProfileController@editdp');
+Route::resource('/checkout', 'Auth\CheckOutController');
 
 
 
@@ -75,7 +75,7 @@ Route::get('/storegloss', function(){
 });
 
 // CREATE PRODUCTS
-Route::resource('/createproduct', 'Admin@createproduct');
+Route::resource('/createproduct', 'Auth\Admin@createproduct');
 Route::get('/emlextcreate', function(){
     return view('admin.products.emulsion_ext.create'); 
 });
@@ -95,8 +95,8 @@ Route::get('/glosscreate', function(){
 
 
 // EDIT PRODUCTS
-Route::resource('/editproduct', 'Admin@editproduct');
-Route::resource('/deleteproduct', 'Admin@deleteproduct');
+Route::resource('/editproduct', 'Auth\Admin@editproduct');
+Route::resource('/deleteproduct', 'Auth\Admin@deleteproduct');
 Route::get('/emlextedit', function(){
     return view('admin.products.emulsion_ext.edit'); 
 });
@@ -113,7 +113,7 @@ Route::get('/glossedit', function(){
     return view('admin.products.gloss.edit');
 });
 // END OF CREATE PRODUCTS
-Route::resource('/sendmail', 'Admin@sendmail');
+Route::resource('/sendmail', 'Auth\Admin@sendmail');
 });
 
 
