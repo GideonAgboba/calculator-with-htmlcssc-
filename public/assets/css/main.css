@@ -37,6 +37,11 @@ body{
       display: none !important;
     }
 
+}
+/* Smartphones (landscape) ———– */
+@media only screen
+and (min-width : 321px) {
+
     .loading_div img{
         position: absolute;
         top: 50%;
