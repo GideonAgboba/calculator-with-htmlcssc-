@@ -385,7 +385,7 @@ and (min-width : 321px) {
   
   /* Declare heights because of positioning of img element */
   .carousel-item {
-    height: 500px;
+    height: 100%;
   }
   .carousel-item > img {
     position: absolute;
@@ -393,7 +393,7 @@ and (min-width : 321px) {
     size: contain;
     left: 0;
     width: 100%;
-    height: 500px;
+    height: 100% !important;
   }
   .errors{
       font-size: 3em;
@@ -402,4 +402,11 @@ and (min-width : 321px) {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+  }
+  .ab-content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 1000;
   }
