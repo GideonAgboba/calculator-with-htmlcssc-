@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/search', 'HomeController@search');
 
 
 Route::group(['middleware' => ['web']], function(){
@@ -134,7 +135,6 @@ Route::resource('/sendmail', 'Admin@sendmail');
 
 
 
-Route::get('/test', function(){
-    $cart = App\Cart::where('user_id', 1)->get();
-    return $cart->count();
+Route::get('/indexmobile', function(){
+   return view('mobile');
 });

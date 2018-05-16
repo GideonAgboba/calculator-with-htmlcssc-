@@ -33,7 +33,8 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" name="email" class="form-control" placeholder="Email" value="{{Auth::user()->email}}" required />
+                                                <input type="hidden" name="email" value="{{Auth::user()->email}}">
+                                                <input type="email" class="form-control" disabled placeholder="Email" value="{{Auth::user()->email}}" required />
                                             </div>
                                         </div>
                                         <div class="col-md-5">

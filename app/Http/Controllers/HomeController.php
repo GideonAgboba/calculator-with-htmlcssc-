@@ -26,4 +26,15 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+
+    public function search(Request $request){
+        $searchkey = $request->search;
+        $emlint_result = EmulsionInterior::where('title', 'like', '%' .$searchkey. '%')->get();
+        $emlext_result = EmulsionExterior::where('title', 'like', '%' .$searchkey. '%')->get();
+        $texint_result = TexcoteInterior::where('title', 'like', '%' .$searchkey. '%')->get();
+        $texext_result = TexcoteExterior::where('title', 'like', '%' .$searchkey. '%')->get();
+        $gloss_result = Gloss::where('title', 'like', '%' .$searchkey. '%')->get();
+        return view('search', compact('searchkey', 'emlint_result', 'emlext_result', 'texint_result', 'texext_result', 'gloss_result'));
+    }
 }
