@@ -45,6 +45,7 @@ if (startchange.length){
 						<h1>SPARKLEPAINTS</h1>
 						<p>Huge sales up to 50% off on negociation</p>
 						<form action="{{ url('/search') }}" method="post">
+  							{{csrf_field()}}
 							<div class="form-group row">
 								<input type="text" name="search" placeholder="Search for item..." class="form-control" style="width: 80%;" required>
 								<button type="submit" class="btn bg-white"><i class="fa fa-search"></i></button>
