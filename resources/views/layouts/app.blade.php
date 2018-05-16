@@ -132,7 +132,7 @@
         $errors = null;
     }
 ?>
-@if(count($errors) > 0)
+@if($errors > 0)
 <div id="id01" class="mod modal" onclick="document.getElementById('id01').style.display='none'">
     <div class="wow fadeInUp mod-content card">
     <div class="modal-header">
