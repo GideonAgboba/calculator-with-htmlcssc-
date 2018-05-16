@@ -134,7 +134,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="row">
-                              <form action="/adminpage" method="POST">
+                              <form action="{{url('/adminpage')}}" method="POST">
                                 {{csrf_field()}}
                                 <input type="hidden" name="owner"  value="{{$order->owner}}" required />
                                 <input type="text" class="form-control" name="delivery_date"  placeholder="Delivery Period (1-6 days)" required />
@@ -153,7 +153,7 @@
                                   Process <i class="ml-3 fa fa-refresh"></i>
                                 </button>
                               </form>
-                              <!-- <form action="/adminordersaccept" method="post">
+                              <!-- <form action="{{url('/adminordersaccept')}}" method="post">
                                 {{csrf_field()}}
                                 <input type="hidden" name="id" value="{{$order->id}}">
                                 <input type="hidden" name="user_id" value="{{$order->user_id}}">
@@ -246,7 +246,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="row">
-                              <form action="/adminpage/{{$order->id}}" method="post">
+                              <form action="{{url('/adminpage')}}/{{$order->id}}" method="post">
                                 {{csrf_field()}}
                                 <input type="hidden" name="_method" value="PUT">
                                 <input type="hidden" name="owner"  value="{{$order->owner}}" required />
@@ -267,7 +267,7 @@
                                   COMPLETED <i class="ml-3 fa fa-check-circle"></i>
                                 </button>
                               </form>
-                              <!-- <form action="/adminordersaccept" method="post">
+                              <!-- <form action="{{url('/adminordersaccept')}}" method="post">
                                 {{csrf_field()}}
                                 <input type="hidden" name="id" value="{{$order->id}}">
                                 <input type="hidden" name="user_id" value="{{$order->user_id}}">
@@ -356,7 +356,7 @@
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <form action="/adminprofilesadmin" enctype="multipart/form-data" method="post">
+          <form action="{{url('/adminprofilesadmin')}}" enctype="multipart/form-data" method="post">
             <div class="modal-body pl-4 pr-4">
               {{csrf_field()}}
               <div class="row">
@@ -418,7 +418,7 @@
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <form action="/adminprofilesguest" enctype="multipart/form-data" method="post">
+          <form action="{{url('/adminprofilesguest')}}" enctype="multipart/form-data" method="post">
             <div class="modal-body pl-4 pr-4">
               {{csrf_field()}}
               <div class="row">
@@ -483,7 +483,7 @@
             </button>
           </div>
           <div class="modal-body">
-              <form action="/sendmail" method="post">
+              <form action="{{url('/sendmail')}}" method="post">
                 {{csrf_field()}}
                 <input type="email" name="to" placeholder="To: example@example.com" class="form-control" required />
                 <input type="text" name="subject" placeholder="Subject" class="form-control" required />
