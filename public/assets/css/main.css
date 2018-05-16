@@ -214,7 +214,6 @@ and (min-width : 321px) {
     color: #111;
     margin-left: -.8rem;
     vertical-align: middle;
-    content: "";
     border-right: .6rem solid transparent;
     border-bottom: .9rem  solid;
     border-left: .6rem solid transparent;
