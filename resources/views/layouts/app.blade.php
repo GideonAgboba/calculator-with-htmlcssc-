@@ -127,7 +127,34 @@
 <div class="loading_div">
     <img src="assets/images/cload.gif" alt="loading...">
 </div>
-
+<?php
+    if(!isset($errors)){
+        $errors = null;
+    }
+?>
+@if(count($errors) > 0)
+<div id="id01" class="mod modal" onclick="document.getElementById('id01').style.display='none'">
+    <div class="wow fadeInUp mod-content card">
+    <div class="modal-header">
+        <h1>Opps <i class="fa fa-frown modal-dialog"></i></h1>
+    </div>
+      <div class="card-body">
+        <div class="alert alert-danger pt-4">
+            <ul class="nav-item">
+                @foreach($errors->all() as $error)
+                    <li class="nav-link">{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <small>Something went wrong</small>
+        <!-- <button onclick="document.getElementById('id01').style.display='none'" class="btn btn-dark"> Close </button> -->
+      </div>
+    </div>
+  </div>
+</div>
+@endif
     @yield('contents')
 
 </body>
