@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\EmulsionInterior;
+use App\EmulsionExterior;
+use App\TexcoteInterior;
+use App\TexcoteExterior;
+use App\Gloss;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
