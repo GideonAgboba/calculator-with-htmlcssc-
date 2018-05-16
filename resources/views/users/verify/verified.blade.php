@@ -297,7 +297,7 @@
                     <input type="hidden" name="owner" value="{{Auth::user()->name}}">
                     <input type="hidden" name="path" value="{{Auth::user()->path}}">
                     <div class="row">
-                        <label for="msg" class="text-muted ml-2">Drop message or complain <i class="fa fa-envelope"></i></label>
+                        <label for="msg" class="text-muted ml-2">Drop message or complain... <i class="fa fa-envelope"></i></label>
                         <textarea name="msg" id="msg" cols="30" rows="10" class="form-control" placeholder="Write here..."></textarea>
                         <input type="submit" value="MESSAGE" class="form-control home_login_btn">
                     </div>
