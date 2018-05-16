@@ -10,7 +10,8 @@
                     <i class="fa fa-smile fa-2x"></i> Search result for "{{$searchkey}}"
                 </div>
                 <div class="col-lg-7">
-                    <form action="/search">
+                    <form action="{{ url('/search') }}">
+                        {{csrf_field()}}
                         <div class="form-group row">
                             <input type="text" name="search" placeholder="Try another search keyword..." class="form-control" style="width: 80%;" required>
                             <button type="submit" class="btn bg-white"><i class="fa fa-search"></i></button>
@@ -24,7 +25,8 @@
                     <i class="fa fa-frown fa-2x"></i> Opps no result found for the search keyword "{{$searchkey}}"
                 </div>
                 <div class="col-lg-7">
-                    <form action="/search">
+                    <form action="{{ url('/search') }}">
+                        {{csrf_field()}}
                         <div class="form-group row">
                             <input type="text" name="search" placeholder="Try another search keyword..." class="form-control" style="width: 80%;" required>
                             <button type="submit" class="btn bg-white"><i class="fa fa-search"></i></button>

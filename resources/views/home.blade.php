@@ -342,7 +342,8 @@ if (startchange.length){
 					<h3>WRITE TO US</h3>
 				 </div>
 				 <div class="col-lg-8">
-					<form action="/sendmail">
+					<form action="{{ url('/sendmail') }}">
+  						{{csrf_field()}}
 						<input type="hidden" name="to" value="sparklepaints@gmail.com">
 						<!-- <input type="text" name="to" class="form-control" placeholder="sparklepaints@gmail.com" disabled required> -->
 						<input type="text" name="subject" class="form-control" placeholder="Subject"  required>

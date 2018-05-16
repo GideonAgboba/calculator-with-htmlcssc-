@@ -44,7 +44,8 @@ if (startchange.length){
 					<div class="ab-content text-white text-center">
 						<h1>SPARKLEPAINTS</h1>
 						<p>Huge sales up to 50% off on negociation</p>
-						<form action="/search">
+						<form action="{{ url('/search') }}">
+  							{{csrf_field}}
 							<div class="form-group row">
 								<input type="text" name="search" placeholder="Search for item..." class="form-control" style="width: 80%;" required>
 								<button type="submit" class="btn bg-white"><i class="fa fa-search"></i></button>
@@ -341,7 +342,8 @@ if (startchange.length){
 					<h3>WRITE TO US</h3>
 				 </div>
 				 <div class="col-lg-8">
-					<form action="/sendmail">
+					<form action="{{ url('/sendmail') }}">
+  						{{csrf_field()}}
 						<input type="hidden" name="to" value="sparklepaints@gmail.com">
 						<!-- <input type="text" name="to" class="form-control" placeholder="sparklepaints@gmail.com" disabled required> -->
 						<input type="text" name="subject" class="form-control" placeholder="Subject"  required>

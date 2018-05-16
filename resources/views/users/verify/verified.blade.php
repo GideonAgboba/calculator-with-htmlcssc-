@@ -19,7 +19,7 @@
                                 </p>
                             </div>
                             <hr>
-                            <form enctype="multipart/form-data" action="/changeprofileimage/{{Auth::user()->id}}" method="post">
+                            <form enctype="multipart/form-data" action="{{url('/changeprofileimage/{{Auth::user()->id}}')}}" method="post">
                                 {{csrf_field()}}
                                 <input type="hidden" name="_method" value="POST">
                                 <div class="row">
@@ -102,7 +102,7 @@
                     <div class="header">
                         <h4 class="title">Edit Profile</h4>
                     </div>
-                    <form class="" enctype="multipart/form-data" action="/editprofile/{{Auth::user()->id}}" method="post">
+                    <form class="" enctype="multipart/form-data" action="{{url('/editprofile/{{Auth::user()->id}}')}}" method="post">
                         {{csrf_field()}}
                         <input type="hidden" name="_method" value="POST">
                         <div class="row">
@@ -291,7 +291,7 @@
     </div>
 
                 <div class="card card-footer">
-                <form action="/sendmsg" method="post">
+                <form action="{{ url('/sendmsg') }}" method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                     <input type="hidden" name="owner" value="{{Auth::user()->name}}">
