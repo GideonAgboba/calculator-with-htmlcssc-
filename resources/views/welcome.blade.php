@@ -23,18 +23,39 @@ if (startchange.length){
 <div ></div>
 			<!-- COVER IMAGE AND FLOATING BUTTON -->
 			<div class="cover-image"></div>	
-			<div class="desktop-fab-container ">
-     			<a href="#next" class="text-white">
-     				<paper-fab class="wow fadeInUp desktop-fab fa fa-angle-down fa-2x main_bg_color"></paper-fab>
-     			</a>
-			</div>
 			
 			<!-- ICON, NAME AND DESCRIPTION -->
-			<div class="wow fadeInUp content-card" id="startchange">
-				<hr>
-				<span class="text-description" style="font-size: 1.1em margin-top: 1em;">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida tristique condimentum. Quisque tempus eleifend sollicitudin. Nulla congue in erat et euismod. Nulla pellentesque leo id dui tempor lobortis. Phasellus sollicitudin ut massa eu dictum. Pellentesque viverra a diam a feugiat. Morbi non lorem et ex finibus elementum. Morbi pharetra risus eget quam pellentesque, sed laoreet purus malesuada. Aenean ut nibh quis lacus mollis euismod. Maecenas pellentesque magna vehicula convallis hendrerit. Sed maximus urna sed suscipit facilisis. Aenean posuere, ligula quis fermentum vulputate, quam nisi pulvinar felis, et sodales ligula augue sit amet nunc. Curabitur eget orci et tortor rhoncus consequat et id nunc. 	
-				</span>	
+			<div class="" id="startchange">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 100vh;">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					<div class="ab-content text-white text-center">
+						<h1>SPARKLEPAINTS</h1>
+						<p>Huge sales up to 50% off on negociation</p>
+						<form action="/search">
+							<div class="form-group row">
+								<input type="text" name="search" placeholder="Search for item..." class="form-control" style="width: 80%;" required>
+								<button type="submit" class="btn bg-white"><i class="fa fa-search"></i></button>
+							</div>
+						</form>
+						<a class="home_login_btn text-white home_btns" href="#next">Explore</a>
+					</div>
+					<div class="carousel-inner" style="filter: brightness(0.2);">
+						<div class="carousel-item active">
+							<img class="first-slide" src="assets/images/102_4781.JPG" alt="First slide">
+						</div>
+						<div class="carousel-item">
+							<img class="second-slide" src="assets/images/ecommerce-shopping-retail-ss-1920.jpg" alt="Second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="third-slide" src="assets/images/ecommerce-shopping-retail-ss-1920.jpg" alt="Third slide">
+						</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			
 
