@@ -44,7 +44,7 @@ if (startchange.length){
 					<div class="ab-content text-white text-center">
 						<h1>SPARKLEPAINTS</h1>
 						<p>Huge sales up to 50% off on negociation</p>
-						<form action="/search">
+						<form action="/search" method="get">
 							<div class="form-group row">
 								<input type="text" name="search" placeholder="Search for item..." class="form-control" style="width: 80%;" required>
 								<button type="submit" class="btn bg-white"><i class="fa fa-search"></i></button>
