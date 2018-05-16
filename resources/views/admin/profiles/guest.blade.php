@@ -77,7 +77,7 @@
                                     <span aria-hidden="true">×</span>
                                   </button>
                                 </div>
-                                <form action="/adminprofilesguest/{{$user->id}}" enctype="multipart/form-data" method="post">
+                                <form action="<?php echo URL::to('/');?>/adminprofilesguest/<?= $user->id; ?>" enctype="multipart/form-data" method="post">
                                   <div class="modal-body pl-4 pr-4">
                                     {{csrf_field()}}
                                     <div class="row">
@@ -139,7 +139,7 @@
                                 <div class="modal-body">Are you sure you want to DELETE {{strtoupper($user->username)}}</div>
                                 <div class="modal-footer">
                                   <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                  <form class="" style="border-style: none;" action="/adminprofilesguest/{{$user->id}}" method="post">
+                                  <form class="" style="border-style: none;" action="<?php echo URL::to('/');?>/adminprofilesguest/<?= $user->id; ?>" method="post">
                                     {{csrf_field()}}
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn text-white btn-danger"><i class="fa fa-trash"></i> Delete</button>

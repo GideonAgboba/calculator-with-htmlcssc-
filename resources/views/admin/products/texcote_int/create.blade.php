@@ -16,7 +16,7 @@
                 <h5>Add a product</h5>
             </div>
             <div class="card-body">
-                <form enctype="multipart/form-data" action="/createproduct" method="post">
+                <form enctype="multipart/form-data" action="{{ulr('/createproduct')}}" method="post">
                     @if(!empty(session()->get('createmsg')))
                         <div class="alert alert-success pt-4 text-center">
                             <p>{{session()->get('createmsg')}}</p>

@@ -33,14 +33,14 @@
                         @foreach($products as $product)
                             <tr>
                             <td>
-                                <form action="/deleteproduct" method="post">
+                                <form action="{{url('/deleteproduct')}}" method="post">
                                     {{csrf_field()}}
                                     <input type="hidden" name="id" value="{{$product->id}}">
                                     <input type="hidden" name="description" value="{{$product->description}}">
                                     <input type="submit" class="btn btn-danger" value="Delete">
                                 </form>
                             </td>
-                            <form action="/editproduct" method="post">
+                            <form action="{{url('/editproduct')}}" method="post">
                             {{csrf_field()}}
                             <input type="hidden" name="id" value="{{$product->id}}">
                             <input type="hidden" name="path" value="{{$product->path}}">
