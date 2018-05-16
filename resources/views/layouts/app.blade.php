@@ -127,11 +127,7 @@
 <div class="loading_div">
     <img src="assets/images/cload.gif" alt="loading...">
 </div>
-<?php
-    if(!isset($errors)){
-        $errors = null;
-    }
-?>
+@if(isset($errors))
 @if(count($errors) > 0)
 <div id="id01" class="mod modal" onclick="document.getElementById('id01').style.display='none'">
     <div class="wow fadeInUp mod-content card">
@@ -154,6 +150,9 @@
     </div>
   </div>
 </div>
+@endif
+@else
+<?php $errors = null; ?>
 @endif
     @yield('contents')
 
