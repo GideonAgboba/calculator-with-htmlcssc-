@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/search', 'HomeController@search')
+Route::get('/search', 'HomeController@search');
 
 
 Route::group(['middleware' => ['web']], function(){
