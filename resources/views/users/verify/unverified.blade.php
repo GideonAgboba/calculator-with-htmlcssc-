@@ -5,7 +5,7 @@
                                 <h4 class="title">Update Profile</h4>
                             </div>
                             <div class="content">
-                                <form class="" enctype="multipart/form-data" action="url('/profile/{{Auth::user()->id}}')" method="post">
+                                <form class="" enctype="multipart/form-data" action="{{url('/profile/{{Auth::user()->id}}')}}" method="post">
                                     {{csrf_field()}}
                                     <input type="hidden" name="_method" value="PUT">
                                     <div class="row">
