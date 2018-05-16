@@ -403,9 +403,9 @@ and (min-width : 321px) {
       transform: translate(-50%, -50%);
   }
   .ab-content{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      z-index: 1000;
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%,-50%) !important;
+      z-index: 1000 !important;
   }

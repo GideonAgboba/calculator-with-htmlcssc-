@@ -19,6 +19,15 @@ if (startchange.length){
 }
 });
 </script>
+<style>
+	.ab-content{
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%,-50%) !important;
+      z-index: 1000 !important;
+  }
+</style>
 <div class="" style="width: 100%">
 <div ></div>
 			<!-- COVER IMAGE AND FLOATING BUTTON -->
