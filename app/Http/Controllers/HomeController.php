@@ -35,6 +35,6 @@ class HomeController extends Controller
         $texint_result = TexcoteInterior::where('title', 'like', '%' .$searchkey. '%')->get();
         $texext_result = TexcoteExterior::where('title', 'like', '%' .$searchkey. '%')->get();
         $gloss_result = Gloss::where('title', 'like', '%' .$searchkey. '%')->get();
-        return view('search', compact('searchkey', 'emlint_result', 'emlext_result', 'texint_result', 'texext_result', 'gloss_result'));
+        return view('find', compact('searchkey', 'emlint_result', 'emlext_result', 'texint_result', 'texext_result', 'gloss_result'));
     }
 }
