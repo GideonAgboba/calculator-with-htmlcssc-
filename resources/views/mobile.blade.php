@@ -104,7 +104,7 @@ body{
 
             <div class="row home-content__main">
 
-                <h2 style="color: #fff;">Welcome to Sparklepaints</h2>
+                <h2 style="color: #fff !important;">Welcome to Sparklepaints</h2>
 
                 <h1 class"fa-2x">Huge sales up to <br> 50% off on negociation </h1>
 
