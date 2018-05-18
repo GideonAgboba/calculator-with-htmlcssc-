@@ -47,6 +47,8 @@ if (startchange.length){
 						<br>
 						<a class="home_login_btn text-white home_btns p-4" href="{{url('/login')}}">LOGIN / SIGN UP TO GET STARTED</a>
 						<br>
+						<br>
+						<br>
 						<a class="home_login_btn text-white home_btns" href="#next">Explore</a>
 					</div>
 					<div class="carousel-inner" style="filter: brightness(0.2);">
