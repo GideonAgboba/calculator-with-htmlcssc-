@@ -12,6 +12,7 @@
     <meta content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" name="viewport">
     <!-- Bootstrap core CSS-->  
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -162,19 +163,6 @@ body{
       display: none !important;
     }
 
-}
-/* Smartphones (landscape) ———– */
-@media only screen
-and (min-width : 321px) {
-
-    .loading_div img{
-        position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        width: 500px;
-        height: 500px;
-    }
 }
 @media screen and (min-width: 1020px){
     .hidemaincat{

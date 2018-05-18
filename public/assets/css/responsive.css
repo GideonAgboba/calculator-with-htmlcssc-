@@ -1,0 +1,23 @@
+@media only screen 
+and (max-device-width: 600px)
+ {
+     body{
+         zoom: 150% !important;
+     }
+    .home_login_container{
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+ }
+
+/* mobile only styles when the device is 0-600px in maximum width */
+
+@media only screen 
+and (max-device-width: 1000px)
+{
+    
+}
+
+/* mobile only styles when the device is up to 1000px in maximum width */
