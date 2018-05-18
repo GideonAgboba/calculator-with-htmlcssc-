@@ -415,13 +415,7 @@
     ================================================== -->
     <div id="preloader">
         <div id="loader">
-            <div class="line-scale-pulse-out">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+            <img src="assets/images/cloud.gif" style="width: 300px; height: 300px;top: 50%;left:50%;" alt="loading...">
         </div>
     </div>
 
