@@ -94,7 +94,7 @@
     </script>
     <script type="text/javascript">
         if (screen.width <= 400) {
-            <?php redirect('/indexmobile'); ?>
+            <?php url('/indexmobile'); ?>
         }
     </script>
 </head>
