@@ -10,7 +10,6 @@
     <meta name="author" content="Agboba Gideom">
     <meta name="theme-color" content="#ffffff">
     <meta content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" name="viewport">
-    <link rel="alternate" media="handheld" href="http:://google.com">
     <!-- Bootstrap core CSS-->  
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -91,6 +90,11 @@
         function dis(){
             document.getElementById("id01").style.display="block";
             document.getElementById("id01").fade(slow);
+        }
+    </script>
+    <script type="text/javascript">
+        if (screen.width <= 400) {
+            window.location = "http://www.mobile-site.com";
         }
     </script>
 </head>
