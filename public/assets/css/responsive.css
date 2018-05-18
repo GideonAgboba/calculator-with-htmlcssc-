@@ -1,9 +1,12 @@
 @media screen and (max-width: 1020px){
+    body{
+        font-size: larger !important;
+    }
     .hide{
       display: none !important;
     }
     .login_div{
-        /* margin-top: 50% !important; */
+        margin-top: 50% !important;
     }
 }
 @media screen and (min-width: 1020px){
@@ -11,3 +14,5 @@
       display: none !important;
     }
 }
+html{font-size:100%;} 
+@media(min-width:60em){html{font-size: 100%}}
