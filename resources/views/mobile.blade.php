@@ -100,14 +100,14 @@
 
             <div class="row home-content__main">
 
-                <h3>Welcome to Sparklepaints</h3>
+                <h2>Welcome to Sparklepaints</h2>
 
-                <h1>Huge sales up to <br> 50% off on negociation </h1>
+                <h1 class"fa-2x">Huge sales up to <br> 50% off on negociation </h1>
 
             </div>
 
             <div class="home-content__scroll">
-                <a href="#about" class="scroll-link smoothscroll">
+                <a href="#about" class="fa-2x scroll-link smoothscroll">
                     <span>Scroll Down</span>
                 </a>
             </div>
