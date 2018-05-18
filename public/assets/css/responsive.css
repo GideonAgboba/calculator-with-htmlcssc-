@@ -1,8 +1,5 @@
 @media screen and (max-width: 1020px){
-    body{
-        font-size: 150% !important;
-        zoom: 100% !important;
-    }
+
     .hide{
       display: none !important;
     }
