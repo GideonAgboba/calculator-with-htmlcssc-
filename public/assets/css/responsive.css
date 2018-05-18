@@ -1,6 +1,6 @@
 @media screen and (max-width: 1020px){
     body{
-        font-size: larger !important;
+        font-size: 150% !important;
     }
     .hide{
       display: none !important;
