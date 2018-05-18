@@ -44,7 +44,7 @@
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                <img src="logo.png" alt="Homepage">
+                <img src="logo.png" width="500" height="170" alt="Homepage">
             </a>
         </div>
 
