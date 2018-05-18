@@ -96,6 +96,7 @@
         if (screen.width <= 400) {
             window.location = "https://google.com";
         }
+        
     </script>
 </head>
 <body id="app-layout" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
