@@ -3,8 +3,7 @@
       display: none !important;
     }
     .login_div{
-        margin-top: 50% !important;
-        background: red !important;
+        /* margin-top: 50% !important; */
     }
 }
 @media screen and (min-width: 1020px){
