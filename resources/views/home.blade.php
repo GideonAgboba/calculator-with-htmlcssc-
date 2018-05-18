@@ -42,7 +42,7 @@ if (startchange.length){
 						<li data-target="#myCarousel" data-slide-to="2"></li>
 					</ol>
 					<div class="ab-content text-white text-center">
-						<h1>SPARKLEPAINTS</h1>
+						<h1>SPARKLE PAINTS</h1>
 						<p>Huge sales up to 50% off on negociation</p>
 						<form action="{{ url('/search') }}" method="post">
   							{{csrf_field()}}

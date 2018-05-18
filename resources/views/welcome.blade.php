@@ -42,10 +42,11 @@ if (startchange.length){
 						<li data-target="#myCarousel" data-slide-to="2"></li>
 					</ol>
 					<div class="ab-content text-white text-center">
-						<h1>SPARKLEPAINTS</h1>
+						<h1>SPARKLE PAINTS</h1>
 						<p>Huge sales up to 50% off on negociation</p>
 						<br>
-						<a class="home_login_btn text-white home_btns p-4" href="{{url('/login')}}">Login and Get started</a>
+						<a class="home_login_btn text-white home_btns p-4" href="{{url('/login')}}">LOGIN / SIGN UP TO GET STARTED</a>
+						<br>
 						<a class="home_login_btn text-white home_btns" href="#next">Explore</a>
 					</div>
 					<div class="carousel-inner" style="filter: brightness(0.2);">
