@@ -94,7 +94,7 @@
     </script>
     <script type="text/javascript">
         if (screen.width <= 400) {
-            window.location = "/indexmobile";
+            window.location = "public/indexmobile";
         }
     </script>
 </head>
