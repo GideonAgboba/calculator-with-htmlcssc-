@@ -94,9 +94,9 @@
     </script>
     <script type="text/javascript">
         if (screen.width <= 400) {
-            window.location = "https://google.com";
+            window.location = "http://gentle-spire-75194.herokuapp.com/public/indexmobile";
         }
-        
+
     </script>
 </head>
 <body id="app-layout" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
