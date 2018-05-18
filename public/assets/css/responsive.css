@@ -2,13 +2,14 @@
 and (max-device-width: 600px)
  {
      body{
-         zoom: 150% !important;
+         zoom: 100% !important;
      }
     .home_login_container{
         position: absolute !important;
         top: 50% !important;
         left: 50% !important;
         transform: translate(-50%, -50%) !important;
+        background: red !important;
     }
  }
 
