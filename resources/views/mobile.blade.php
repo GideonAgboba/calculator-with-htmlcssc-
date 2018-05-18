@@ -37,7 +37,11 @@
 </head>
 
 <body id="top">
-
+<style>
+body{
+    font-size: larger !important;
+}
+</style>
     <!-- header
     ================================================== -->
     <header class="s-header">
@@ -100,7 +104,7 @@
 
             <div class="row home-content__main">
 
-                <h2>Welcome to Sparklepaints</h2>
+                <h2 style="color: #fff;">Welcome to Sparklepaints</h2>
 
                 <h1 class"fa-2x">Huge sales up to <br> 50% off on negociation </h1>
 
