@@ -15,7 +15,7 @@
         </div>
         <div class="col-lg-6">
             <div class="container" style="width:80%;padding-top: 5em;">
-                <div class=" login_div justify-content-center card">
+                <div class="login_div justify-content-center card">
                     <div class="card-header">
                         <h2>LOGIN <i class="fa fa-lock-open"></i></h2>
                     </div>

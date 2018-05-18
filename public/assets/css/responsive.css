@@ -2,14 +2,13 @@
     .hide{
       display: none !important;
     }
-    .home_login_container{
+    .login_div{
         position: absolute !important;
         top: 50% !important;
         left: 50% !important;
         transform: translate(-50%, -50%) !important;
         background: red !important;
     }
-
 }
 @media screen and (min-width: 1020px){
     .hidemaincat{
