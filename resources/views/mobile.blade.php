@@ -261,7 +261,7 @@
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Contact Us</h3>
-                <h1 class="display-2 display-2--light">Reach out for a new project or just say hello</h1>
+                <h1 class="display-2 display-2--light">Reach out for us <br>say hello</h1>
             </div>
         </div>
 
@@ -321,26 +321,23 @@
                     <div class="cinfo">
                         <h5>Where to Find Us</h5>
                         <p>
-                            1600 Amphitheatre Parkway<br>
-                            Mountain View, CA<br>
-                            94043 US
+                            Suite 02, agboba street, atan-ota <br>
+                            ogun-state, Nigeria.
                         </p>
                     </div>
 
                     <div class="cinfo">
                         <h5>Email Us At</h5>
                         <p>
-                            contact@glintsite.com<br>
-                            info@glintsite.com
+                            Sparklepaints@gmail.com
                         </p>
                     </div>
 
                     <div class="cinfo">
                         <h5>Call Us At</h5>
                         <p>
-                            Phone: (+63) 555 1212<br>
-                            Mobile: (+63) 555 0100<br>
-                            Fax: (+63) 555 0101
+                            Phone: (+234) 899615582<br>
+                            Mobile: (+234) 8033034768
                         </p>
                     </div>
 
@@ -352,13 +349,7 @@
                             <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
                         </li>
                     </ul> <!-- end contact-social -->
 
@@ -415,7 +406,7 @@
     ================================================== -->
     <div id="preloader">
         <div id="loader">
-            <img src="assets/images/cloud.gif" style="width: 300px; height: 300px;top: 50%;left:50%;" alt="loading...">
+            <img src="assets/images/cload.gif" style="width: 400px; height: 400px;top: 50%;left:50%;" alt="loading...">
         </div>
     </div>
 
