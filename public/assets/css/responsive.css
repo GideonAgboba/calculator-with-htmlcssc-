@@ -1,9 +1,7 @@
-@media only screen 
-and (max-device-width: 600px)
- {
-     body{
-         zoom: 100% !important;
-     }
+@media screen and (max-width: 1020px){
+    .hide{
+      display: none !important;
+    }
     .home_login_container{
         position: absolute !important;
         top: 50% !important;
@@ -11,14 +9,10 @@ and (max-device-width: 600px)
         transform: translate(-50%, -50%) !important;
         background: red !important;
     }
- }
 
-/* mobile only styles when the device is 0-600px in maximum width */
-
-@media only screen 
-and (max-device-width: 1000px)
-{
-    
 }
-
-/* mobile only styles when the device is up to 1000px in maximum width */
+@media screen and (min-width: 1020px){
+    .hidemaincat{
+      display: none !important;
+    }
+}
