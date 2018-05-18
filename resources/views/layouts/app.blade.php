@@ -10,6 +10,7 @@
     <meta name="author" content="Agboba Gideom">
     <meta name="theme-color" content="#ffffff">
     <meta content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" name="viewport">
+    <link rel="alternate" media="handheld" href="http:://google.com">
     <!-- Bootstrap core CSS-->  
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -156,26 +157,6 @@
   </div>
 </div>
 @endif
-
-
-<?php
-$detect_device = new Mobile_Detect;
-
-// For All Mobile Devices
-if($detect_device->isMobile()) 
-{
- header('Location: http://m.samplesite.com/');
- exit;
-}
-
-// For All Tablet Devices
-if( $detect_device->isTablet()) 
-{
- header('Location: http://m.samplesite.com/');
- exit;
-}
-
-?>
     @yield('contents')
 
 </body>
