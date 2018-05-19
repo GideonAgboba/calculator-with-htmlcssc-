@@ -4,91 +4,7 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
-<style>
 
-      	
-          .main_row {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -ms-flex-wrap: wrap !important;
-    flex-wrap: wrap !important;
-    margin-right: -15px !important;
-    margin-left: -15px !important;
-  }
-  
-  .form_input {
-    display: block !important;
-    width: 100% !important;
-    padding: 0.375rem 0.75rem !important;
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
-    color: #495057 !important;
-    background-color: #fff !important;
-    background-clip: padding-box !important;
-    border: 1px solid #ced4da !important;
-    border-radius: 0.25rem !important;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
-  }
-  
-  .form_input::-ms-expand {
-    background-color: transparent !important;
-    border: 0 !important;
-  }
-  
-  .form_input:focus {
-    color: #495057 !important;
-    background-color: #fff !important;
-    border-color: #80bdff !important;
-    outline: 0 !important;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
-  }
-  
-  .form_input::-webkit-input-placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input::-moz-placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input:-ms-input-placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input::-ms-input-placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input::placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input:disabled, .form_input[readonly] {
-    background-color: #e9ecef !important;
-    opacity: 1 !important;
-  }
-  
-  select.form_input:not([size]):not([multiple]) {
-    height: calc(2.25rem + 2px) !important;
-  }
-  
-  select.form_input:focus::-ms-value {
-    color: #495057 !important;
-    background-color: #fff !important;
-  }
-  
-  .form_input-file,
-  .form_input-range {
-    display: block !important;
-    width: 100% !important;
-  }
-</style>
 <head>
 
     <!--- basic page needs
@@ -107,8 +23,6 @@
     <link rel="stylesheet" href="mobile/css/base.css">
     <link rel="stylesheet" href="mobile/css/vendor.css">
     <link rel="stylesheet" href="mobile/css/main.css">
-
-    <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- script
     ================================================== -->
@@ -195,15 +109,6 @@ body{
                 <h1 class"fa-2x">Huge sales up to <br> 50% off on negociation </h1>
 
             </div>
-
-            <form action="{{ url('/search') }}" method="post">
-                {{csrf_field()}}
-                <div class="main_row" style="padding-left: 11.5em;">
-                    <input type="text" name="search" placeholder="Search for item..." class="form_input" style="width: 30% !important;" required>
-                    <button type="submit" class="btn bg-white" style="background-color: #fff; height: 60px;" ><i class="fa fa-search"></i></button>
-                </div>
-            </form>
-
 
             <div class="home-content__scroll">
                 <a href="#about" class="fa-2x scroll-link smoothscroll">
