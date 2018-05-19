@@ -48,13 +48,13 @@ body{
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                <img src="logo.png" width="800" height="220" alt="Homepage">
+                <img src="logo.png" width="800" height="22e0" alt="Homepage">
             </a>
         </div>
 
         <nav class="header-nav">
 
-            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+            <a -><span>Close</span></a>
 
             <div class="header-nav__content">
                 <h3>Sparklepaints</h3>
@@ -66,7 +66,7 @@ body{
                     <!-- <li><a class="smoothscroll"  href="#works" title="works">Our products</a></li> -->
                     <li><a class="smoothscroll"  href="#contact" title="contact">Contact us</a></li>
                 </ul>
-    
+				
                 <ul class="header-nav__social">
                     <li>
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -107,7 +107,7 @@ body{
                 <h1 class"fa-2x">Huge sales up to <br> 50% off on negociation </h1>
 
             </div>
-
+            <a href="{{url('/login')}}">Login /signup</a>
             <div class="home-content__scroll">
                 <a href="#about" class="fa-2x scroll-link smoothscroll">
                     <span>Scroll Down</span>

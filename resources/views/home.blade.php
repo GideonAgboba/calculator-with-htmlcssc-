@@ -128,6 +128,7 @@ body{
     font-size: larger !important;
 }
 </style>
+@include('layouts.home-navbar')
     <!-- header
     ================================================== -->
     <header class="s-header">
