@@ -48,7 +48,7 @@ body{
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                <img src="logo.png" width="500" height="170" alt="Homepage">
+                <img src="logo.png" width="800" height="220" alt="Homepage">
             </a>
         </div>
 
@@ -66,8 +66,6 @@ body{
                     <!-- <li><a class="smoothscroll"  href="#works" title="works">Our products</a></li> -->
                     <li><a class="smoothscroll"  href="#contact" title="contact">Contact us</a></li>
                 </ul>
-    
-                <p>Please view this site on a desktop/laptop for full features.</p>
     
                 <ul class="header-nav__social">
                     <li>
