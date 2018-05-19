@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="mobile/css/vendor.css">
     <link rel="stylesheet" href="mobile/css/main.css">
 
+    <link rel="stylesheet" href="assets/css/main.css">
+
     <!-- script
     ================================================== -->
     <script src="mobile/js/modernizr.js"></script>
@@ -109,6 +111,15 @@ body{
                 <h1 class"fa-2x">Huge sales up to <br> 50% off on negociation </h1>
 
             </div>
+
+            <form action="{{ url('/search') }}" method="post">
+                {{csrf_field()}}
+                <div class="main_row" style="padding-left: 11.5em;">
+                    <input type="text" name="search" placeholder="Search for item..." class="form_input" style="width: 30% !important;" required>
+                    <button type="submit" class="btn bg-white" style="background-color: #fff; height: 60px;" ><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+
 
             <div class="home-content__scroll">
                 <a href="#about" class="fa-2x scroll-link smoothscroll">
