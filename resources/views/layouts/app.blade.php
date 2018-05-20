@@ -219,7 +219,7 @@
 
     </style> -->
 
-    <link rel="stylesheet" href="mobile/css/main.css">
+    <link rel="stylesheet" href="mobile/css/loading.css">
 </head>
 <body id="top" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
     <div class="pace  pace-inactive">
