@@ -107,7 +107,7 @@ body{
 
                 <h1 class"fa-2x">Huge sales up to <br> 50% off on negociation </h1>
 
-            <a href="{{url('/login')}}" class="full-width btn--primary">Get started</a>
+                <button class="full-width btn--primary"><a href="{{url('/login')}}" class="text-white">Get started</a></button>
             </div>
             <div class="home-content__scroll">
                 <a href="#about" class="fa-2x scroll-link smoothscroll">
