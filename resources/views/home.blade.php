@@ -215,7 +215,7 @@ body{
 
             <form action="{{ url('/search') }}" method="post">
                 {{csrf_field()}}
-                <div class="main_row" style="padding-left: 12em;">
+                <div class="main_row" style="padding-left: 13em;">
                     <input type="text" name="search" placeholder="Search for item..." class="form_input" style="width: 30% !important;" required>
                     <button type="submit" class="btn bg-white" style="background-color: #fff; height: 60px;" ><i class="fa fa-search"></i></button>
                 </div>

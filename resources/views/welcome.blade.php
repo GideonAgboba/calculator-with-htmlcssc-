@@ -65,7 +65,7 @@ body{
                     <li><a class="smoothscroll"  href="#services" title="services">Our services</a></li>
                     <!-- <li><a class="smoothscroll"  href="#works" title="works">Our products</a></li> -->
                     <li><a class="smoothscroll"  href="#contact" title="contact">Contact us</a></li>
-                    
+
                 </ul>
 				
                 <ul class="header-nav__social">
@@ -107,8 +107,8 @@ body{
 
                 <h1 class"fa-2x">Huge sales up to <br> 50% off on negociation </h1>
 
+            <a href="{{url('/login')}}" class="full-width btn--primary">Get started</a>
             </div>
-            <a href="{{url('/login')}}">Login /signup</a>
             <div class="home-content__scroll">
                 <a href="#about" class="fa-2x scroll-link smoothscroll">
                     <span>Scroll Down</span>
