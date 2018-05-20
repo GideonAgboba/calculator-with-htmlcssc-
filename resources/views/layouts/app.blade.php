@@ -111,7 +111,7 @@
     right: 0;
     bottom: 0;
     background: #050505;
-    z-index: 800;
+    z-index: 80000000000000000000000000000000000000000000000000000000000000000;
     height: 100%;
     width: 100%;
     display: table;
