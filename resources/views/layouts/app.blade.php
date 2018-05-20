@@ -184,7 +184,7 @@
 
     </style>
 </head>
-<body id="app-layout" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
+<body id="top" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
 <?php
     if(!isset($errors)){
         $errors = null;
