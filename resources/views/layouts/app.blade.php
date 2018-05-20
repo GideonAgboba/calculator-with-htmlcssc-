@@ -101,14 +101,14 @@
 </head>
 <body id="app-layout" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
 
-<script>
+<!-- <script>
   //paste this code under the head tag or in a separate js file.
   // Wait for window load
   $(window).load(function() {
     // Animate loader off screen
     $(".loading_div").fadeOut("slow");
   });
-</script>
+</script> -->
 <style>
 .loading_div{
     position: fixed;
@@ -131,9 +131,9 @@
     height: 300px;
 }
 </style>
-<div class="loading_div">
+<!-- <div class="loading_div">
     <img src="assets/images/cload.gif" alt="loading...">
-</div>
+</div> -->
 <?php
     if(!isset($errors)){
         $errors = null;
@@ -163,6 +163,15 @@
 </div>
 @endif
     @yield('contents')
-
+    <div id="preloader">
+        <div id="loader">
+            <img src="assets/images/cload.gif" style="width: 400px; height: 400px;top: 50%;left:50%;" alt="loading...">
+        </div>
+    </div>
+       <!-- Java Script
+    ================================================== -->
+    <script src="mobile/js/jquery-3.2.1.min.js"></script>
+    <script src="mobile/js/plugins.js"></script>
+    <script src="mobile/js/main.js"></script>
 </body>
 </html>
