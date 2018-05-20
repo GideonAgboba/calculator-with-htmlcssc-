@@ -146,7 +146,7 @@
     right: 0;
     bottom: 0;
     background: #050505;
-    z-index: 80000000000000000000000000000000000000000000000000000000000000000;
+    z-index: 80000000000000000000000000000000000000;
     height: 100%;
     width: 100%;
     display: table;
@@ -159,7 +159,7 @@
 #loader {
     display: table-cell;
     text-align: center;
-    z-index: 80000000000000000000000000000000000000000000000000000000000000000;
+    z-index: 800000000000000000000000000000000000;
     vertical-align: middle;
 }
 
@@ -169,7 +169,7 @@
     height: 35px;
     border-radius: 2px;
     margin: 2px;
-    z-index: 80000000000000000000000000000000000000000000000000000000000000000;
+    z-index: 80000000000000000000000000000000000000;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     display: inline-block;
