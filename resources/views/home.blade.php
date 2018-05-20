@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('contents')
-    <link rel="stylesheet" href="mobile/css/base.css">
-    <link rel="stylesheet" href="mobile/css/vendor.css">
-    <link rel="stylesheet" href="mobile/css/main.css">
 
-    <link rel="stylesheet" href="assets/css/main.css">
     <script src="mobile/js/modernizr.js"></script>
     <script src="mobile/js/pace.min.js"></script>
 @include('layouts.home-navbar')
