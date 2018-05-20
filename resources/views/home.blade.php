@@ -1,332 +1,367 @@
 @extends('layouts.app')
 @section('contents')
+@extends('layouts.home-navbar')
+<script>
+  $(document).ready(function(){
+var scroll_start = 0;
+var startchange = $('#startchange');
+var offset = startchange.offset();
+if (startchange.length){
+    $(document).scroll(function() {
+        scroll_start = $(this).scrollTop();
+        if(scroll_start > offset.top) {
+            $(".nav-change").css({'background-color':'#000000d6',
+                                        'transition': 'cubic-bezier(0.895, 0.03, 0.685, 0.22)'});
+        } else {
+            $('.nav-change').css({'background-color':'transparent'});
+        }
+    });
+}
+});
+</script>
+<style>
+	.ab-content{
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%,-50%) !important;
+      z-index: 1000 !important;
+  }
+</style>
+<div class="" style="width: 100%">
+<div ></div>
+			<!-- COVER IMAGE AND FLOATING BUTTON -->
+			<div class="cover-image"></div>	
+			
+			<!-- ICON, NAME AND DESCRIPTION -->
+			<div class="" id="startchange">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 100vh;">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					<div class="ab-content text-white text-center">
+						<h1>SPARKLEPAINTS</h1>
+						<p>Huge sales up to 50% off on negociation</p>
+						<form action="{{ url('/search') }}" method="post">
+  							{{csrf_field()}}
+							<div class="form-group row">
+								<input type="text" name="search" placeholder="Search for item..." class="form-control" style="width: 80%;" required>
+								<button type="submit" class="btn bg-white"><i class="fa fa-search"></i></button>
+							</div>
+						</form>
+						<a class="home_login_btn text-white home_btns" href="#next">Explore</a>
+					</div>
+					<div class="carousel-inner" style="filter: brightness(0.2);">
+						<div class="carousel-item active">
+							<img class="first-slide" src="assets/images/102_4781.JPG" alt="First slide">
+						</div>
+						<div class="carousel-item">
+							<img class="second-slide" src="assets/images/ecommerce-shopping-retail-ss-1920.jpg" alt="Second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="third-slide" src="assets/images/ecommerce-shopping-retail-ss-1920.jpg" alt="Third slide">
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
 
-    <script src="mobile/js/modernizr.js"></script>
-    <script src="mobile/js/pace.min.js"></script>
-@include('layouts.home-navbar')
-    <!-- header
-    ================================================== -->
-    
 
 
-    <!-- home
-    ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
-        <div class="overlay"></div>
-        <div class="shadow-overlay"></div>
+		 <div class="wow fadeInUp content-works text-white mt-5 mb-5" style="overflow: hidden;">
+				<div class="row text-center">
+					<div class="col-lg-4">
+						<div class="media">
+							<div class="media-body pl-3">
+							<i class="fa fa-3x fa-shield-alt main_text_color"></i>
+								<strong><h5>Security</h5></strong>
+								<p class=""><small>logging in is fast and easy as we  help secure your passwords from  every possible treats.</small></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="media">
+							<div class="media-body pl-3">
+							<i class="fa fa-3x fa-box-open main_text_color"></i>
+								<strong><h5>Products</h5></strong>
+								<p class=""><small>logging in is fast and easy as we help secure your passwords from every possible treats.</small></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="media">
+							<div class="media-body pl-3">
+							<i class="fa fa-3x fa-shipping-fast main_text_color"></i>
+								<strong><h5>Delivery</h5></strong>
+								<p class=""><small>logging in is fast and easy as we help secure your passwords from every possible treats.</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-lg-4">
+						<div class="media">
+							<div class="media-body pl-3">
+							<i class="fa fa-3x fa-credit-card main_text_color"></i>
+								<strong><h5>Payments</h5></strong>
+								<p class=""><small>logging in is fast and easy as we  help secure your passwords from  every possible treats.</small></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="media">
+							<div class="media-body pl-3">
+							<i class="fa fa-3x fa-archive main_text_color"></i>
+								<strong><h5>Records</h5></strong>
+								<p class=""><small>logging in is fast and easy as we help secure your passwords from every possible treats.</small></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="media">
+							<div class="media-body pl-3">
+							<i class="fa fa-3x fa-globe main_text_color"></i>
+								<strong><h5>Log in and go</h5></strong>
+								<p class=""><small>logging in is fast and easy as we help secure your passwords from every possible treats.</small></p>
+							</div>
+						</div>
+					</div>
+				</div> 
+     	    </div>
 
-        <div class="home-content">
 
-            <div class="row home-content__main">
 
-                <h2 style="color: #fff !important;">Welcome to Sparklepaints</h2>
-
-                <h1 class"fa-2x">Huge sales up to <br> 50% off on negociation </h1>
-
-            </div>
-
-            <form action="{{ url('/search') }}" method="post">
-                {{csrf_field()}}
-                <div class="main_row" style="padding-left: 11.5em;">
-                    <input type="text" name="search" placeholder="Search for item..." class="form_input" style="width: 30% !important;" required>
-                    <button type="submit" class="btn bg-white" style="background-color: #fff; height: 60px;" ><i class="fa fa-search"></i></button>
+			
+			
+		<div class="wow fadeInUp content-card" id="next" style="margin-top: 0% !important;"> 
+			<h1 class="">OUR PRODUCTS</h1>
+			<hr>	
+			<div class="desktop-fab-container ">
+     			<a href="#nextnextnext" class="text-white">
+     				<paper-fab class="wow fadeInUp desktop-fab fa fa-angle-down fa-2x main_bg_color"></paper-fab>
+     			</a>
+			</div>
+			    <div class="row">
+				<div class="screenshot-item">
+                    <a href="img/screenshots/ss1.png" data-featherlight="image">
+                        <img src="assets/images/emulsion.jpg">
+                    </a>
                 </div>
-            </form>
-
-
-            <div class="home-content__scroll">
-                <a href="#about" class="fa-2x scroll-link smoothscroll">
-                    <span>Scroll Down</span>
-                </a>
-            </div>
-
-            <div class="home-content__line"></div>
-
-        </div> <!-- end home-content -->
-
-
-        <ul class="home-social">
-            <li>
-                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
-            </li>
-            <li>
-                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
-            </li>
-            <li>
-                <a href="#0"><i class="fa fa-google" aria-hidden="true"></i><span>Gmail</span></a>
-            </li>
-        </ul> 
-        <!-- end home-social -->
-
-    </section> <!-- end s-home -->
-
-
-    <!-- about
-    ================================================== -->
-    <section id='about' class="s-about">
-
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">Hello There</h3>
-                <h1 class="display-1 display-1--light">We Are Sparklepaints</h1>
-            </div>
-        </div> <!-- end section-header -->
-
-        <div class="row about-desc" data-aos="fade-up">
-            <div class="col-full">
-                <p>
-                    Our vision is to make top quality paints that stands you out among the rest. To achieve this, we have up to date technology at our disposal to offer best quality paint at affordable prices.
-                </p>
-            </div>
-        </div> <!-- end about-desc -->
-
-        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
-                
-            <div class="col-block stats__col ">
-                <div class="stats__count">127</div>
-                <h5>Awards Received</h5>
-            </div>
-            <div class="col-block stats__col">
-                <div class="stats__count">1505</div>
-                <h5>Company records</h5>
-            </div>
-            <div class="col-block stats__col">
-                <div class="stats__count">109</div>
-                <h5>Transactions Completed</h5>
-            </div>
-            <div class="col-block stats__col">
-                <div class="stats__count">102</div>
-                <h5>Goods in-check</h5> 
-            </div>
-
-        </div> <!-- end about-stats -->
-
-        <div class="about__line"></div>
-
-    </section> <!-- end s-about -->
-
-
-    <!-- services
-    ================================================== -->
-    <section id='services' class="s-services">
-
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead">What We Do</h3>
-                <h1 class="display-2">We’ve got everything you need paint your dreams</h1>
-            </div>
-        </div> <!-- end section-header -->
-
-        <div class="row services-list block-1-2 block-tab-full">
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-paint-brush"></i>
+                <div class="screenshot-item">
+                    <a href="img/screenshots/ss2.png" data-featherlight="image">
+                        <img src="assets/images/texcote.jpg">
+                    </a>
                 </div>
-                <div class="service-text">
-                    <h3 class="h2">Brand Quality</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
+                <div class="screenshot-item">
+                    <a href="img/screenshots/ss3.png" data-featherlight="image">
+                        <img src="assets/images/gloss.jpg">
+                    </a>
                 </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-group"></i>
+                <div class="screenshot-item">
+                    <a href="img/screenshots/ss4.png" data-featherlight="image">
+                        <img src="assets/images/all.jpg">
+                    </a>
                 </div>
-                <div class="service-text">
-                    <h3 class="h2">Ideology</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-megaphone"></i>
-                </div>  
-                <div class="service-text">
-                    <h3 class="h2">Marketing</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-earth"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2">Global scope</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. 
-                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-
-        </div> <!-- end services-list -->
-
-    </section> <!-- end s-services -->
-
-
-
-
-
-    <!-- contact
-    ================================================== -->
-    <section id="contact" class="s-contact">
-
-        <div class="overlay"></div>
-        <div class="contact__line"></div>
-
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead">Contact Us</h3>
-                <h1 class="display-2 display-2--light">Reach out for us <br>say hello</h1>
-            </div>
-        </div>
-
-        <div class="row contact-content" data-aos="fade-up">
-            
-            <div class="contact-primary">
-
-                <h3 class="h6">Send Us A Message</h3>
-
-                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
-                    <fieldset>
-    
-                    <div class="form-field">
-                        <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
-                    </div>
-                    <div class="form-field">
-                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
-                    </div>
-                    <div class="form-field">
-                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
-                    </div>
-                    <div class="form-field">
-                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
-                    </div>
-                    <div class="form-field">
-                        <button class="full-width btn--primary">Submit</button>
-                        <div class="submit-loader">
-                            <div class="text-loader">Sending...</div>
-                            <div class="s-loader">
-                                <div class="bounce1"></div>
-                                <div class="bounce2"></div>
-                                <div class="bounce3"></div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    </fieldset>
-                </form>
-
-                <!-- contact-warning -->
-                <div class="message-warning">
-                    Something went wrong. Please try again.
-                </div> 
-            
-                <!-- contact-success -->
-                <div class="message-success">
-                    Your message was sent, thank you!<br>
-                </div>
-
-            </div> <!-- end contact-primary -->
-
-            <div class="contact-secondary">
-                <div class="contact-info">
-
-                    <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
-
-                    <div class="cinfo">
-                        <h5>Where to Find Us</h5>
-                        <p>
-                            Suite 02, agboba street, atan-ota <br>
-                            ogun-state, Nigeria.
-                        </p>
-                    </div>
-
-                    <div class="cinfo">
-                        <h5>Email Us At</h5>
-                        <p>
-                            Sparklepaints@gmail.com
-                        </p>
-                    </div>
-
-                    <div class="cinfo">
-                        <h5>Call Us At</h5>
-                        <p>
-                            Phone: (+234) 899615582<br>
-                            Mobile: (+234) 8033034768
-                        </p>
-                    </div>
-
-                    <ul class="contact-social">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
-                        </li>
-                    </ul> <!-- end contact-social -->
-
-                </div> <!-- end contact-info -->
-            </div> <!-- end contact-secondary -->
-
-        </div> <!-- end contact-content -->
-
-    </section> <!-- end s-contact -->
+				</div>
+     	    </div>
+			
+		
+		<!-- APP DETAILS -->
+		<div class="wow fadeInUp content-card" style="margin-top: 0;" id="nextnext">
+			<h1 class="" style="font-weight: 300; color: #333">DETAILS</h1>
+			<hr>
+     		<div class="row">
+				 <div class="col-lg-3">
+					 <h3 class="text-center" style="font-weight: 300; color: #333">Emulsion</h3>
+						<div>
+							<!-- REPLACE WITH YOUR APP DETAILS ACCORDINGLY -->
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="mail"></iron-icon>
+								<span class="text-description">Entertainment</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="star"></iron-icon>
+								<span class="text-description">Average Rating 4.4</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="info"></iron-icon>
+								<span class="text-description">Version 1.0.295<span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="android"></iron-icon>
+								<span class="text-description">Android 4.0.3+</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="assessment"></iron-icon>
+								<span class="text-description">10,000+ downloads</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="fa fa-warehouse"></iron-icon>
+								<span class="text-description"><a href="#" class="ml-5 btn main_bg_sec_color text-center">Go to store</a></span>
+							</div>
+						</div>
+				 </div>
+				 <div class="col-lg-3">
+					 <h3 class="text-center" style="font-weight: 300; color: #333">Texcote</h3>
+						<div>
+							<!-- REPLACE WITH YOUR APP DETAILS ACCORDINGLY -->
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="mail"></iron-icon>
+								<span class="text-description">Entertainment</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="star"></iron-icon>
+								<span class="text-description">Average Rating 4.4</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="info"></iron-icon>
+								<span class="text-description">Version 1.0.295<span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="android"></iron-icon>
+								<span class="text-description">Android 4.0.3+</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="assessment"></iron-icon>
+								<span class="text-description">10,000+ downloads</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="fa fa-warehouse"></iron-icon>
+								<span class="text-description"><a href="#" class="btn main_bg_sec_color ml-5">Go to store</a></span>
+							</div>
+						</div>
+				 </div>
+				 <div class="col-lg-3">
+					 <h3 class="text-center" style="font-weight: 300; color: #333">Gloss</h3>
+						<div>
+							<!-- REPLACE WITH YOUR APP DETAILS ACCORDINGLY -->
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="mail"></iron-icon>
+								<span class="text-description">Entertainment</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="star"></iron-icon>
+								<span class="text-description">Average Rating 4.4</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="info"></iron-icon>
+								<span class="text-description">Version 1.0.295<span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="android"></iron-icon>
+								<span class="text-description">Android 4.0.3+</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="assessment"></iron-icon>
+								<span class="text-description">10,000+ downloads</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="fa fa-warehouse"></iron-icon>
+								<span class="text-description"><a href="#" class="btn main_bg_sec_color ml-5">Go to store</a></span>
+							</div>
+						</div>
+				 </div>
+				 <div class="col-lg-3">
+					 <h3 class="text-center" style="font-weight: 300; color: #333">Others</h3>
+						<div>
+							<!-- REPLACE WITH YOUR APP DETAILS ACCORDINGLY -->
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="mail"></iron-icon>
+								<span class="text-description">Entertainment</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="star"></iron-icon>
+								<span class="text-description">Average Rating 4.4</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="info"></iron-icon>
+								<span class="text-description">Version 1.0.295<span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="android"></iron-icon>
+								<span class="text-description">Android 4.0.3+</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="details-icon" icon="assessment"></iron-icon>
+								<span class="text-description">10,000+ downloads</span>
+							</div>
+							<div class="detail-item">
+								<iron-icon class="fa fa-warehouse"></iron-icon>
+								<span class="text-description"><a href="#" class="btn main_bg_sec_color text-center text-white">Go to store</a></span>
+							</div>
+						</div>
+				 </div>
+			 </div>
+     	</div>
 
 
+		 <div class="wow fadeInUp container pt-3 pb-3" id="nextnextnext">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="header text-center text-white">
+						<h3>ABOUT US</h3>
+						<hr>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus possimus sed ab earum ut quidem atque soluta quibusdam suscipit quas, explicabo facilis sequi fugiat provident quis saepe obcaecati cum maxime.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-9">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="first-slide" src="assets/images/ecommerce-shopping-retail-ss-1920.jpg" alt="First slide">
+						</div>
+						<div class="carousel-item">
+							<img class="second-slide" src="assets/images/ecommerce-shopping-retail-ss-1920.jpg" alt="Second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="third-slide" src="assets/images/ecommerce-shopping-retail-ss-1920.jpg" alt="Third slide">
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- photoswipe background
-    ================================================== -->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
 
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
 
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
 
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
-                    "Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
-                "Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
+		 <div class="wow fadeInUp content-card" id="nextnextnextnextnext" style="margin-top: 0px;">
+			 <div class="row">
+				 <div class="col-lg-4">
+					<h3>WRITE TO US</h3>
+				 </div>
+				 <div class="col-lg-8">
+					<form action="{{ url('/sendmail') }}">
+  						{{csrf_field()}}
+						<input type="hidden" name="to" value="sparklepaints@gmail.com">
+						<!-- <input type="text" name="to" class="form-control" placeholder="sparklepaints@gmail.com" disabled required> -->
+						<input type="text" name="subject" class="form-control" placeholder="Subject"  required>
+						<textarea name="body" class="form-control" placeholder="Message" id="" cols="30" rows="10"  required></textarea>
+						<input type="submit" class="form-control text-white home_login_btn" value="SEND MESSAGE">
+					</form>
+				 </div>
+			 </div>
+		</div>
+		
+		
+		<!-- SPACE BELOW DETAILS -->	
+		<div class="empty-space">
+			<div class="meta-container wow fadeInUp">
+				<div class="wow fadeInUp detail-item watermark credits">
+						<span class="text-description credits-text" style="color: #ffffff">Sparklepaints@2018</span>
+				</div>
+			</div>	
+		</div>
 
-        </div>
-
-    </div> 
 @endsection
