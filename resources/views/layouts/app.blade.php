@@ -103,7 +103,7 @@
     ================================================== -->
     <script src="mobile/js/modernizr.js"></script>
     <script src="mobile/js/pace.min.js"></script>
-    <style>
+    <!-- <style>
         
 /* ------------------------------------------------------------------- 
  * ## pace.js styles - minimal
@@ -123,7 +123,7 @@
 .pace .pace-progress {
     background: #39b54a;
     position: fixed;
-    z-index: 800000000000000000000000000000000000000000000000000000000000000000000000000 !important;
+    z-index: 800000000000000000000000000000000000000000000000000000000000000000000000000;
     top: 0;
     right: 100%;
     width: 100%;
@@ -217,9 +217,11 @@
     }
 }
 
-    </style>
+    </style> -->
+
+    <link rel="stylesheet" href="mobile/css/main.css">
 </head>
-<body id="top">
+<body id="top" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
     <div class="pace  pace-inactive">
     </div>
 <?php
