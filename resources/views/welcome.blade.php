@@ -22,7 +22,7 @@
     ================================================== -->
     <link rel="stylesheet" href="mobile/css/base.css">
     <link rel="stylesheet" href="mobile/css/vendor.css">
-    <link rel="stylesheet" href="mobile/css/main.css">
+    <link rel="stylesheet" href="mobile/css/full-main.css">
 
     <!-- script
     ================================================== -->
