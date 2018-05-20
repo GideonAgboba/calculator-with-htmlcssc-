@@ -98,42 +98,9 @@
         }
 
     </script>
+     <link rel="stylesheet" href="mobile/css/main.css">
 </head>
 <body id="app-layout" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
-
-<!-- <script>
-  //paste this code under the head tag or in a separate js file.
-  // Wait for window load
-  $(window).load(function() {
-    // Animate loader off screen
-    $(".loading_div").fadeOut("slow");
-  });
-</script> -->
-<style>
-.loading_div{
-    position: fixed;
-    top: 0px !important;
-    bottom: 0px !important;
-    left: 0px !important;
-    right: 0px !important;
-    height: 100vh;
-    width: 100%;
-    background: #000;
-    color: #fff;
-    z-index: 100000000000000000000000000000000000000000000000000000000000 !important;
-}
-.loading_div img{
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
-}
-</style>
-<!-- <div class="loading_div">
-    <img src="assets/images/cload.gif" alt="loading...">
-</div> -->
 <?php
     if(!isset($errors)){
         $errors = null;
