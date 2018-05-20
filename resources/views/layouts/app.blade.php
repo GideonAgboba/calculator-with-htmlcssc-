@@ -220,6 +220,8 @@
     </style>
 </head>
 <body id="top" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
+    <div class="pace  pace-inactive">
+    </div>
 <?php
     if(!isset($errors)){
         $errors = null;
