@@ -65,7 +65,7 @@
                     <div class="row">
                         @if($items = App\Cart::where('user_id', Auth::user()->id)->get())
                             @foreach($items as $item)
-                            <form class="col-lg-4 col-md-6 mb-4 wow fadeInUp" action="/cart/{{$item->id}}" method="post">
+                            <form class="col-lg-4 col-md-6 mb-4 wow fadeInUp" action="<?php echo URL::to('/');?>/cart/<?= Auth::user()->id?>" method="post">
                                 <div class="text-center">
                                 <div class="card card-img-top">
                                     <a href="#"><img class="" src="assets/images/products/{{$item->path}}" alt=""></a>
