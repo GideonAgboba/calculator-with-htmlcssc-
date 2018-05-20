@@ -127,7 +127,7 @@
     top: 0;
     right: 100%;
     width: 100%;
-    height: 4px;
+    height: 50px;
 }
 
 .oldie .pace {
