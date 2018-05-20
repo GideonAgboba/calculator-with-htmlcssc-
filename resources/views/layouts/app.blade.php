@@ -124,15 +124,17 @@
 #loader {
     display: table-cell;
     text-align: center;
+    z-index: 80000000000000000000000000000000000000000000000000000000000000000;
     vertical-align: middle;
 }
 
 .line-scale-pulse-out > div {
-    background-color: #39b54a;
+    background-color: #999;
     width: 4px;
     height: 35px;
     border-radius: 2px;
     margin: 2px;
+    z-index: 80000000000000000000000000000000000000000000000000000000000000000;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     display: inline-block;
