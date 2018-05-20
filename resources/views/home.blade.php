@@ -3,7 +3,92 @@
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class="no-js" lang="en">
+<!--<![endif]-->
+<style>
 
+      	
+          .main_row {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+  }
+  
+  .form_input {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.375rem 0.75rem !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    color: #495057 !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 0.25rem !important;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  }
+  
+  .form_input::-ms-expand {
+    background-color: transparent !important;
+    border: 0 !important;
+  }
+  
+  .form_input:focus {
+    color: #495057 !important;
+    background-color: #fff !important;
+    border-color: #80bdff !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+  }
+  
+  .form_input::-webkit-input-placeholder {
+    color: #6c757d !important;
+    opacity: 1 !important;
+  }
+  
+  .form_input::-moz-placeholder {
+    color: #6c757d !important;
+    opacity: 1 !important;
+  }
+  
+  .form_input:-ms-input-placeholder {
+    color: #6c757d !important;
+    opacity: 1 !important;
+  }
+  
+  .form_input::-ms-input-placeholder {
+    color: #6c757d !important;
+    opacity: 1 !important;
+  }
+  
+  .form_input::placeholder {
+    color: #6c757d !important;
+    opacity: 1 !important;
+  }
+  
+  .form_input:disabled, .form_input[readonly] {
+    background-color: #e9ecef !important;
+    opacity: 1 !important;
+  }
+  
+  select.form_input:not([size]):not([multiple]) {
+    height: calc(2.25rem + 2px) !important;
+  }
+  
+  select.form_input:focus::-ms-value {
+    color: #495057 !important;
+    background-color: #fff !important;
+  }
+  
+  .form_input-file,
+  .form_input-range {
+    display: block !important;
+    width: 100% !important;
+  }
+</style>
 <head>
 
     <!--- basic page needs
@@ -43,155 +128,10 @@ body{
     font-size: larger !important;
 }
 </style>
+@include('layouts.home-navbar')
     <!-- header
     ================================================== -->
-    <header class="s-header">
-
-        <div class="header-logo">
-            <a class="site-logo" href="index.html">
-                <img src="logo.png" width="500" height="170" alt="Homepage">
-            </a>
-        </div>
-
-        <nav class="header-nav">
-
-            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
-
-            <div class="header-nav__content">
-                <h3>Sparklepaints</h3>
-                
-                <ul class="header-nav__list">
-                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll"  href="#about" title="about">About us</a></li>
-                    <li><a class="smoothscroll"  href="#services" title="services">Our services</a></li>
-                    <!-- <li><a class="smoothscroll"  href="#works" title="works">Our products</a></li> -->
-                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact us</a></li>
-                    
-        @if(Auth::user()->role_id == 1)
-        <li class="">
-          <a class="ml-0 nav-link" href="{{url('/adminpage')}}">Visit admin page</a>
-        </li>
-        @endif
-        <li class=" dropdown">
-            <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Store<span class="d-lg-none"></span>
-            </a>
-            <div class="dropdown-menu text-center" aria-labelledby="alertsDropdown">
-              <h6 class="dropdown-header">Store items:</h6>
-              <div class="dropdown-divider"></div>
-                <a href="{{ url('/storeemulsionemulsion_ext') }}" class="btn-light nav-link text-dark">Emulsion</a>
-                <a href="{{ url('/storetexcotetexcote_ext') }}" class="btn-light nav-link text-dark">Texcote</a>
-                <a href="{{ url('/storegloss') }}" class="btn-light nav-link text-dark">Gloss</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item small" href="#"></a>
-            </div>
-        </li>
-        <li class=" dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-lg mt-2 fa-shopping-cart"></i>
-              <div class="bg-danger text-white hide rounded-circle cart_count">
-                {{App\Cart::where('user_id', Auth::user()->id)->count()}}
-              </div>
-            <span class="d-lg-none">Cart
-              <span class="badge badge-danger">{{App\Cart::where('user_id', Auth::user()->id)->count()}} New</span>
-            </span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="alertsDropdown">
-            <h6 class="dropdown-header">Cart items:</h6>
-            <div class="dropdown-divider"></div>
-              @if(App\Cart::where('user_id', Auth::user()->id)->count() > 0)
-              <?php $cartitems = App\Cart::where('user_id', Auth::user()->id)->get() ?>
-                <div class="bg-light card pt-1 pb-1">
-                  @foreach($cartitems as $cartitem)
-                    <div class="row mb-1 ml-1">
-                      <div class="col-lg-2">
-                        <img src="assets/images/products/{{$cartitem->path}}" class="img-responsive" width='20' height='20' alt="">
-                      </div>
-                      <div class="col-lg-9">
-                        <div class="row">
-                          <small class="nav-link text-dark" style="margin-top: -5px;">{{$cartitem->title}}  x{{$cartitem->quantity}}</small>
-                        </div>
-                      </div>
-                    </div>
-                  @endforeach
-                </div>
-              @else
-                  <p class="text-center nav-link text-danger">Empty Cart</p>
-              @endif
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item small" href="{{url('/basket')}}">Go to basket <i class="fa fa-angle-right"></i></a>
-          </div>
-        </li>
-
-        <li class=" dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img src="uploads/{{Auth::user()->path}}" class="home_user_profile">
-          </a>
-          <div class="dropdown-menu text-center" aria-labelledby="alertsDropdown">
-            <h6 class="dropdown-header">{{Auth::user()->name}}:</h6>
-            <div class="dropdown-divider"></div>
-              <a href="{{ url('/profile') }}" class="nav-link bg-light text-dark">Profile</a>
-              <a href="{{ url('/logout') }}" class="nav-link bg-light text-dark">Logout</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item small" href="#"></a>
-          </div>
-        </li>
-
-        @if(Auth::user()->role_id == 1)
-          @if(Auth::user()->is_active == 0)
-          <li class=" dropdown mt-2 hide">
-            <span class="alert alert-warning ">
-              <small>Welcome admin user (Unverified) <i class="fa fa-times-circle"></i></small>
-            </span>
-          </li>
-          @else
-          <li class=" dropdown mt-2 hide">
-            <span class="alert alert-success ">
-              <small>Welcome admin user (Verified) <i class="fa fa-check-circle"></i></small>
-            </span>
-          </li>
-          @endif
-        @else
-          @if(Auth::user()->is_active == 0)
-          <li class=" dropdown mt-2 hide">
-            <span class="alert alert-danger ">
-              <small>Unverified <i class="fa fa-times-circle"></i></small>
-            </span>
-          </li>
-          @else
-          <li class=" dropdown mt-2 hide">
-            <span class="alert alert-success ">
-              <small>Verified <i class="fa fa-check-circle"></i></small>
-            </span>
-          </li>
-          @endif
-        @endif
-                </ul>
     
-                <p>Please view this site on a desktop/laptop for full features.</p>
-    
-                <ul class="header-nav__social">
-                    <li>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-google"></i></a>
-                    </li>
-                </ul>
-
-            </div> <!-- end header-nav__content -->
-
-        </nav>  <!-- end header-nav -->
-
-        <a class="header-menu-toggle" href="#0">
-            <span class="header-menu-text"></span>
-            <span class="header-menu-icon"></span>
-        </a>
-
-    </header> <!-- end s-header -->
 
 
     <!-- home
@@ -213,7 +153,7 @@ body{
 
             <form action="{{ url('/search') }}" method="post">
                 {{csrf_field()}}
-                <div class="main_row" style="padding-left: 13em;">
+                <div class="main_row" style="padding-left: 11.5em;">
                     <input type="text" name="search" placeholder="Search for item..." class="form_input" style="width: 30% !important;" required>
                     <button type="submit" class="btn bg-white" style="background-color: #fff; height: 60px;" ><i class="fa fa-search"></i></button>
                 </div>
