@@ -98,6 +98,11 @@
         }
 
     </script>
+
+<!-- script
+    ================================================== -->
+    <script src="mobile/js/modernizr.js"></script>
+    <script src="mobile/js/pace.min.js"></script>
     <style>
         
 /* ------------------------------------------------------------------- 
@@ -243,10 +248,6 @@
   </div>
 </div>
 @endif
-<!-- script
-    ================================================== -->
-    <script src="mobile/js/modernizr.js"></script>
-    <script src="mobile/js/pace.min.js"></script>
     @yield('contents')
     <div id="preloader">
         <div id="loader">
