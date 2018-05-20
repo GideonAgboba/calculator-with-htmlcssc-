@@ -1,138 +1,12 @@
-<!DOCTYPE html>
-<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
-<!--<![endif]-->
-<style>
-
-      	
-          .main_row {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -ms-flex-wrap: wrap !important;
-    flex-wrap: wrap !important;
-    margin-right: -15px !important;
-    margin-left: -15px !important;
-  }
-  
-  .form_input {
-    display: block !important;
-    width: 100% !important;
-    padding: 0.375rem 0.75rem !important;
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
-    color: #495057 !important;
-    background-color: #fff !important;
-    background-clip: padding-box !important;
-    border: 1px solid #ced4da !important;
-    border-radius: 0.25rem !important;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
-  }
-  
-  .form_input::-ms-expand {
-    background-color: transparent !important;
-    border: 0 !important;
-  }
-  
-  .form_input:focus {
-    color: #495057 !important;
-    background-color: #fff !important;
-    border-color: #80bdff !important;
-    outline: 0 !important;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
-  }
-  
-  .form_input::-webkit-input-placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input::-moz-placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input:-ms-input-placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input::-ms-input-placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input::placeholder {
-    color: #6c757d !important;
-    opacity: 1 !important;
-  }
-  
-  .form_input:disabled, .form_input[readonly] {
-    background-color: #e9ecef !important;
-    opacity: 1 !important;
-  }
-  
-  select.form_input:not([size]):not([multiple]) {
-    height: calc(2.25rem + 2px) !important;
-  }
-  
-  select.form_input:focus::-ms-value {
-    color: #495057 !important;
-    background-color: #fff !important;
-  }
-  
-  .form_input-file,
-  .form_input-range {
-    display: block !important;
-    width: 100% !important;
-  }
-</style>
-<head>
-
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Sparklepaints</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom fonts for this template-->
-    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href="assets/vendor/fontawesome-free-5.0.9/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css">
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
-    ================================================== -->
+@extends('layouts.app')
+@section('contents')
     <link rel="stylesheet" href="mobile/css/base.css">
     <link rel="stylesheet" href="mobile/css/vendor.css">
     <link rel="stylesheet" href="mobile/css/main.css">
 
     <link rel="stylesheet" href="assets/css/main.css">
-
-    <!-- script
-    ================================================== -->
     <script src="mobile/js/modernizr.js"></script>
     <script src="mobile/js/pace.min.js"></script>
-
-    <!-- favicons
-    ================================================== -->
-    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
-    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
-
-</head>
-
-<body id="top">
-<style>
-body{
-    font-size: larger !important;
-}
-</style>
 @include('layouts.home-navbar')
     <!-- header
     ================================================== -->
@@ -458,24 +332,5 @@ body{
 
         </div>
 
-    </div> <!-- end photoSwipe background -->
-
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader">
-            <img src="assets/images/cload.gif" style="width: 400px; height: 400px;top: 50%;left:50%;" alt="loading...">
-        </div>
-    </div>
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="mobile/js/jquery-3.2.1.min.js"></script>
-    <script src="mobile/js/plugins.js"></script>
-    <script src="mobile/js/main.js"></script>
-
-</body>
-
-</html>
+    </div> 
+@endsection
