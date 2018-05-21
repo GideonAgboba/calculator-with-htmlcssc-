@@ -131,7 +131,7 @@
 				<form action="{{ url('/search') }}" method="post">
 					{{csrf_field()}}
 					<div class="" style="display: inline !important;">
-						<input type="text" name="search" placeholder="Search for item..." class="search_input"  required>
+						<input type="text" name="search" placeholder="Search for item..." class="search_input" style="background: #fff;" required>
 						<button type="submit" class="search_btn"><i class="fa fa-search"></i></button>
 					</div>
 				</form>
