@@ -30,7 +30,7 @@
     <div class="row">
       @if($items = App\Gloss::all())
         @foreach($items as $item)
-          <form class=" wow fadeInUp col-lg-4 col-md-6 mb-4" action="{{url('/cart')}}" method="post">
+          <form class=" wow fadeInUp col-lg-4 col-md-6 mb-4" action="/cart" method="post">
             <div>
               <div class="card h-100 card-img-top">
                 <a href="#"><img class="card" src="assets/images/products/{{$item->path}}" alt=""></a>

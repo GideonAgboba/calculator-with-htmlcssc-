@@ -494,7 +494,7 @@ form,
 fieldset {
     border: none;
 }
-
+/* 
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -518,7 +518,7 @@ select {
     border-bottom: 2px solid rgba(0, 0, 0, 0.15);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-}
+} */
 
 .cl-custom-select {
     position: relative;
@@ -1693,7 +1693,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .home-content h1 {
     font-family: "montserrat-medium", sans-serif;
     font-size: 6.3rem;
-    line-height: 1.333;
+    /* line-height: 1.333; */
     margin-top: 0;
     color: #FFFFFF;
 }
@@ -3489,3 +3489,21 @@ footer .row {
 
 
 /*# sourceMappingURL=main.css.map */
+
+.search_input{
+    border-style: none;
+    padding: 23px;
+    display: inline !important;
+    border-radius: 4px;
+    width: 50%;
+    margin-left: 0.5em;
+    background: #fff;
+    color: #000;
+}
+.search_btn{
+    display: inline !important;
+    border-radius: 4px;
+    border-style: none;
+    background: #fff;
+    color: #000;
+}

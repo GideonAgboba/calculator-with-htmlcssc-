@@ -7,7 +7,7 @@
                 <i class="fa text-success fa-check-circle" style="font-size: 10em;"></i>
                 <p>Order placed successfully</p>
                 <p>
-                    <form action="<?php echo URL::to('/');?>/checkout/<?= Auth::user()->id?>" method="get">
+                    <form action="/checkout/{{Auth::user()->id}}" method="get">
                         {{csrf_field()}}
                         <input type="hidden" name="_method" vlaue="GET">
                         <input type="submit" class="btn home_login_btn" value="Continue to website">

@@ -1,54 +1,72 @@
 @extends('layouts.app')
 @section('contents')
-<div class="login_bg" style="height: 100vh;">
-    <div class="row">
-        <div class="col-lg-6">
-        <div class="wow fadeInUp hide container text-white" style="margin-top: 14em;">
-                <div class="header text-center">
-                    <h2>BEGIN YOUR COMMERCIAL <br> EXPERIENCE</h2>
-                    <p>Huge sales up to 50% off on negociation</p>
-                <div class="float-center">
-                    <button data-toggle="modal" data-target="#registermodal" class="home_btns home_login_btn">REGISTER</button>
-                </div>
-                </div>
+
+<html class="no-js" lang="en">
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="mobile/css/base.css">
+    <link rel="stylesheet" href="mobile/css/vendor.css">
+    <link rel="stylesheet" href="mobile/css/custom.css">
+<div class="justify-content-center text-center my-auto">
+      <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Get started</h3>
+                <h1 class="display-2 display-2--light">Login with us</h1>
             </div>
         </div>
-        <div class="col-lg-6">
-            <div class="container" style="width:80%;padding-top: 5em;">
-                <div class="login_div justify-content-center card">
-                    <div class="card-header">
-                        <h2>LOGIN <i class="fa fa-lock-open"></i></h2>
+
+        <div class="row contact-content" data-aos="fade-up">
+            
+            <div class="contact-primary">
+
+                <form  method="post" action="{{ url('/login')}}">
+                    {{ csrf_field() }}
+                    <fieldset>
+                    <div class="form-field">
+                        <input name="email" type="email" id="" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
                     </div>
-                    <div class="card-body">
-                        <form class=""  method="POST" action="{{ url('/login') }}">
-                            {{ csrf_field() }}
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input class="form-control" name="email" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" value="{{ old('email') }}" placeholder="Enter email">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input class="form-control" name="password" id="exampleInputPassword1" type="password" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                <label class="form-check-label">
-                                    <input class="form-check-input p-5" type="checkbox"> Remember Password</label>
-                                </div>
-                            </div>
-                            <button class="btn  home_login_btn form-control btn-block" type="submit">Login</button>
-                        </form>
+                    <div class="form-field">
+                        <input name="password" type="password" id="" placeholder="Your Password" value="" class="full-width">
                     </div>
-                    <div class="card-footer">
-                        <div class="text-center text-dark">
-                            <a class="d-block small mt-3" data-toggle="modal" data-target="#registermodal" href="#">Register an Account</a>
-                            <a class="d-block small" data-toggle="modal" data-target="#forgotpass" href="#">Forgot Password?</a>
-                        </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Login</button>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+                    </fieldset>
+                </form>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h3 class="h6 hide-on-fullwidth">Dont have an account?</h3>
+
+                    <div class="cinfo">
+                        <h5>
+                            <a href="{{ url('/register') }}" class="btn full-width btn--primary">CREATE ACCOUNT</a>
+                        </h5>
+                        <p>
+                            Forgot password? <a> Reset here</a>
+                        </p>
+                    </div>
+
+                </div> <!-- end contact-info -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
 </div>
     @include('layouts.modals')
 @endsection

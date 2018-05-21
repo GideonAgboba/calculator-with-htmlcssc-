@@ -12,7 +12,6 @@
     <meta content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" name="viewport">
     <!-- Bootstrap core CSS-->  
     <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
     <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -34,9 +33,6 @@
     <script src="assets/js/sb-admin.min.js"></script>
     <!-- Custom scripts for this page-->
     <script src="assets/js/sb-admin-datatables.min.js"></script>
-    <!-- Loader script -->
-    <script src="assets/js/loader.js"></script>
-    <script src="assets/js/loadermat.js"></script>
     <link rel="stylesheet" href="assets/home/css/tidy.css">
     <link rel="stylesheet" href="assets/home/css/animate.css">
     <script src="assets/home/bower_components/webcomponentsjs/webcomponents.js"></script>
@@ -92,22 +88,15 @@
             document.getElementById("id01").fade(slow);
         }
     </script>
-    <script type="text/javascript">
-        if (screen.width <= 400) {
-            window.location = "http://gentle-spire-75194.herokuapp.com/public/indexmobile";
-        }
-
-    </script>
-
-<!-- script
+    <!-- script
     ================================================== -->
     <script src="mobile/js/modernizr.js"></script>
     <script src="mobile/js/pace.min.js"></script>
-    <link rel="stylesheet" href="mobile/css/main.css">
+    <link rel="stylesheet" href="mobile/css/full-main.css">
+    <!-- <link rel="stylesheet" href="mobile/css/custom.css"> -->
 </head>
 <body id="top" onload="dis()" oncontextmenu="return false"  onrightmousedown="return false">
-    <div class="pace  pace-inactive">
-    </div>
+
 <?php
     if(!isset($errors)){
         $errors = null;
@@ -137,12 +126,19 @@
 </div>
 @endif
     @yield('contents')
+
+
+
+    <!-- preloader
+    ================================================== -->
     <div id="preloader">
         <div id="loader">
             <img src="assets/images/cload.gif" style="width: 400px; height: 400px;top: 50%;left:50%;" alt="loading...">
         </div>
     </div>
-       <!-- Java Script
+
+
+    <!-- Java Script
     ================================================== -->
     <script src="mobile/js/jquery-3.2.1.min.js"></script>
     <script src="mobile/js/plugins.js"></script>
